@@ -1,0 +1,50 @@
+{
+  "name": "my-webpack-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/markpro-code/micro-frontend-demo.git",
+  "author": "markpro-code <markpro.code@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "qiankun": "^2.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.15.6",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-object-assign": "^7.14.5",
+    "@babel/plugin-transform-react-jsx-source": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/runtime": "^7.15.4",
+    "@babel/runtime-corejs3": "^7.15.4",
+    "@webpack-cli/generators": "^2.4.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "core-js": "^3.18.2",
+    "css-loader": "^6.4.0",
+    "eslint": "^7.32.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "html-webpack-plugin": "^5.3.2",
+    "prettier": "^2.4.1",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "description": "My webpack project",
+  "scripts": {
+    "build": "npm run build:main && npm run build:sub1 && npm run build:sub2",
+    "build:main": "webpack --config=packages/main-app/webpack.config.cjs",
+    "build:sub1": "webpack --config=packages/sub-app1/webpack.config.cjs",
+    "build:sub2": "webpack --config=packages/sub-app2/webpack.config.cjs"
+  }
+}
